@@ -1,0 +1,24 @@
+project: ship_detection
+seed: 42
+dataset:
+  canonical_root: data/processed/dota
+  class_names:
+    - ship
+  splits:
+    train: train
+    validation: val
+    test: test
+evaluation:
+  selection_split: val
+  final_split: test
+  oriented_metrics:
+    - map50
+    - map50_95
+    - precision
+    - recall
+    - f1
+  operational_metrics:
+    - latency_ms_per_image
+    - peak_vram_mb
+    - parameter_count
+artifacts_root: outputs
