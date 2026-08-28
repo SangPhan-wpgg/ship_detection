@@ -1,0 +1,14 @@
+name: yolov8_obb
+framework: ultralytics
+task: obb
+weights: yolov8n-obb.pt
+data_adapter: yolo_obb
+data_yaml: data/processed/yolo_obb/data.yaml
+training:
+  epochs: 100
+  image_size: 1024
+  batch: 4
+  optimizer: AdamW
+  learning_rate: 0.001
+  seed: 42
+output: outputs/yolov8_obb

@@ -1,0 +1,9 @@
+name: oriented_rcnn_or_r3det
+framework: mmrotate
+task: obb
+data_adapter: dota_native
+data_root: data/processed/dota
+training:
+  config_template: choose and version-control the MMRotate config before training
+  seed: 42
+output: outputs/mmrotate_obb

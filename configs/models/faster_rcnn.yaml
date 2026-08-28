@@ -1,0 +1,14 @@
+name: faster_rcnn
+framework: torchvision
+task: horizontal_bbox_baseline
+weights: FasterRCNN_ResNet50_FPN_Weights.DEFAULT
+data_adapter: torchvision_dota
+data_root: data/processed/dota
+training:
+  epochs: 30
+  batch: 4
+  optimizer: AdamW
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  seed: 42
+output: outputs/faster_rcnn
